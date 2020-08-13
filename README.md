@@ -1,10 +1,10 @@
-# Calculadora de Média Personalizada
+# Calculadora de Média Personalizada (FM_IEP)
 
-Projeto feito para fins estudantis,mas utilizado em planos reais. Meu primeiro projeto executável,criado para otimizar o tempo que os professores levariam para contabilizar a média final de cada aluno na instituição de ensino Instituto Ieda Picon,localizada em Embu das Artes - SP - Brasil.
+Projeto feito para fins estudantis,mas utilizado por profissionais. Meu primeiro projeto executável,criado para otimizar o tempo que os professores levariam para contabilizar a média final de cada aluno na instituição de ensino Instituto Ieda Picon,localizada em Embu das Artes - SP - Brasil.
 
-## 🚀 Objetivo do projeto
+## 🚀 Objetivo da Aplicação
 
-O objetivo deste projeto foi de otimizar o tempo que o professor levava para fechar as médias finais de cada aluno dentro da instituição. Além disso, há a diminuição de erros devido o uso de números flutuantes em grande quantidade,pois apenas com o uso da calculadora normal,ocorria uma certa dificuldade para manipular os números,levando a erros e por consequência reinicio da contagem das notas. Com o uso da Calculadora Personalizada, de acordo com as notas requeridas pela institutição, o professor em menos tempo consegue concluir o "fechamento" de todas as médias finais.
+O objetivo deste projeto foi de otimizar o tempo que o professor levava para fechar as médias finais de cada aluno dentro da instituição. Além disso, há a diminuição de erros devido o uso de números flutuantes em grande quantidade,pois apenas com o uso da calculadora normal,ocorria uma certa dificuldade para manipular os números,levando a erros e por consequência reinicio da contagem das notas. Com o uso da Calculadora Personalizada, de acordo com as notas requeridas pela institutição, o professor em menos tempo consegue concluir o "fechamento" de todas as médias finais. Outrossim, o programa cria um arquivo txt que facilita a passagem de notas para o sistema oficial da instituição.
 
 ## 📋 Pré-Requisitos
 
@@ -16,9 +16,9 @@ Necessário apenas o dowload do arquivo **FECHAMENTO_MÉDIA.EXE** localizado nes
 
 ## ⚙️ Execução
 
-A forma de uso é extramamente simples e intuitiva. O professor inicialmente digita a série e a quantidade de alunos referente a série digitada, após isso o programa pergunta as notas de cada atividade feita por aluno da série,simultanêamente o programa registra a turma, número de chamada, média e situação em forma de tabela em um arquivo txt. Ao fim da adição da contabilização das notas o professor tem opçôes de fechar mais médias, ver as médias que ja foram fechadas ou apagar os dados do arquivo.
+A forma de uso é extremamente simples e intuitiva. O professor inicialmente digita a série e a quantidade de alunos referente a série digitada, após isso o programa recebe as notas de cada atividade feita por aluno da série,simultanêamente o programa registra a turma, número de chamada, média e situação em forma de tabela em um arquivo txt. Ao fim da adição de notas pela serie o professor tem opções de fechar mais médias, ver as médias que ja foram fechadas ou apagar os dados do arquivo.
 
-## Screens
+## :newspaper: Screens
 ![tela1](https://user-images.githubusercontent.com/64699971/90176018-baee0400-dd7e-11ea-94b4-a0b76917d775.png)
 ![tela2](https://user-images.githubusercontent.com/64699971/90176056-ca6d4d00-dd7e-11ea-9cee-f5798b67f3b6.png)
 ![tela4](https://user-images.githubusercontent.com/64699971/90176098-d6f1a580-dd7e-11ea-8881-7ea6d776af2e.png)
