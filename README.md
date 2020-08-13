@@ -62,8 +62,5 @@ Este projeto possui um intuito estudantil, logo as versões são publicadas conf
 
 ## 🎁 Expressões de gratidão
 
-* Agradeço sempre,primeiramente,a Deus.
-* Agradeço,pelo auxílio na lógica do programa, Gabriel Costa Silva - Bacharel em Engenharia Química - Universidade de São Paulo (USP) - gcosta.gcs@usp.br
 * Agradecimento ao [Instituto Ieda Picon](https://www.institutoiedapicon.com.br/)
-
- 
+* Agradeço,pelo auxílio na lógica do programa, Gabriel Costa Silva - Bacharel em Engenharia Química - Universidade de São Paulo (USP) - gcosta.gcs@usp.br
