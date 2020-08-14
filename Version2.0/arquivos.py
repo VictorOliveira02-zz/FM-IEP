@@ -1,4 +1,9 @@
-import emoji
+import colored
+from colored import stylize
+
+vermelho = colored.fg("red_1") + colored.attr("bold")
+verde = colored.fg("green") + colored.attr("bold")
+verde_olive = colored.fg("dark_olive_green_3b") + colored.attr("bold")
 
 def add_medias(txt):
     arquivo = open('FM_IEP.txt', 'a+')
@@ -9,18 +14,18 @@ def files():
     try:
         arquivo = open("FM_IEP.txt", "a+")
     except:
-        print(emoji.emojize('\n\033[1;31mNÃO FOI POSSIVEL ABRIR O ARQUIVO FM_IEP.txt!:-1:\n\033[m', use_aliases = True))
+        print(stylize('\nNÃO FOI POSSIVEL ABRIR O ARQUIVO FM_IEP.txt!\n', vermelho, colored.attr("underlined")))
     else:
-        print(emoji.emojize('\n\033[1;32mARQUIVO FM_IEP.txt CRIADO COM SUCESSO!:+1:\n\033[m', use_aliases = True))
+        print(stylize('\n\033[1;32mARQUIVO FM_IEP.txt CRIADO COM SUCESSO!\n', verde, colored.attr("underlined")))
         arquivo.close()
 
 def open_arquivo():
     try:
         arquivo = open("FM_IEP.txt", "r")
     except:
-        print(emoji.emojize('\n\033[1;31mNÃO FOI POSSIVEL ABRIR O ARQUIVO FM_IEP.txt!:-1:\n\033[m', use_aliases = True))
+        print(stylize('\nNÃO FOI POSSIVEL ABRIR O ARQUIVO FM_IEP.txt!\n', vermelho, colored.attr("underlined")))
     else:
-        print(arquivo.read())
+        print(stylize(arquivo.read(), verde_olive, colored.attr("underlined")))
         arquivo.close()
 
 def reset():

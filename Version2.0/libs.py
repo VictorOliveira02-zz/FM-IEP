@@ -1,11 +1,15 @@
-import emoji
+import colored
+from colored import stylize
+
+vermelho = colored.fg("red_1") + colored.attr("bold")
+roxo = colored.fg("magenta") + colored.attr("bold")
 
 def read_int(txt):
     while True:
         try:
             read = int(input(txt))
         except (ValueError, TypeError, KeyboardInterrupt):
-            print(emoji.emojize('\n\033[1;31mPOR FAVOR,UTILIZE APENAS NÚMEROS!\033[m:no_entry_sign:', use_aliases = True))
+            print(stylize('\nPOR FAVOR,UTILIZE APENAS NÚMEROS!', vermelho, colored.attr("underlined")))
             continue
         else:
             return read
@@ -21,10 +25,10 @@ def prova(msg):
         try:
             prova = virgula(msg)
             while prova > 6 or prova < 0:
-                print(emoji.emojize('\n\033[1;31mATENÇÃO! O VALOR MÁXIMO DA PROVA É DE 6 PONTOS\033[m:no_entry_sign:', use_aliases = True))
+                print(stylize('\nATENÇÃO! O VALOR MÁXIMO DA PROVA É DE 6 PONTOS', vermelho, colored.attr("underlined")))
                 prova = virgula(msg) 
         except ValueError:
-            print(emoji.emojize('\n\033[1;31mPOR FAVOR,UTILIZE APENAS NOTAS VÁLIDAS!\033[m:no_entry_sign:', use_aliases = True))
+            print(stylize('\nPOR FAVOR,UTILIZE APENAS NOTAS VÁLIDAS!', vermelho, colored.attr("underlined")))
         else:
             return prova
 
@@ -33,10 +37,10 @@ def teste(msg):
         try:
             teste = virgula(msg)
             while teste > 1 or teste < 0:
-                print(emoji.emojize('\n\033[1;31mATENÇÃO! O VALOR MÁXIMO DO TESTE É DE 1 PONTO \033[m:no_entry_sign:', use_aliases = True))
+                print(stylize('\nATENÇÃO! O VALOR MÁXIMO DO TESTE É DE 1 PONTO ', vermelho, colored.attr("underlined")))
                 teste = virgula(msg) 
         except ValueError:
-            print(emoji.emojize('\n\033[1;31mPOR FAVOR,UTILIZE APENAS NOTAS VÁLIDAS!\033[m:no_entry_sign:', use_aliases = True))
+            print(stylize('\nPOR FAVOR,UTILIZE APENAS NOTAS VÁLIDAS!', vermelho, colored.attr("underlined")))
         else:
             return teste
 
@@ -45,14 +49,14 @@ def atividade(msg):
         try:
             atividade = virgula(msg)
             while atividade > 1 or atividade < 0:
-                print(emoji.emojize('\n\033[1;31mATENÇÃO! O VALOR MÁXIMO DA ATIVIDADE 1 É DE 1 PONTO \033[m:no_entry_sign:', use_aliases = True))
+                print(stylize('\nATENÇÃO! O VALOR MÁXIMO DA ATIVIDADE 1 É DE 1 PONTO ', vermelho, colored.attr("underlined")))
                 atividade = virgula(msg) 
         except ValueError:
-            print(emoji.emojize('\n\033[1;31mPOR FAVOR,UTILIZE APENAS NOTAS VÁLIDAS!\033[m:no_entry_sign:', use_aliases = True))
+            print(stylize('\nPOR FAVOR,UTILIZE APENAS NOTAS VÁLIDAS!', vermelho, colored.attr("underlined")))
         else:
             return atividade
 
 def main():
-    print("\n\033[1;95m-> O QUE DESEJA FAZER AGORA?\n[ 1 ] - FECHAR MAIS MÉDIAS.\n[ 2 ] - DAR UMA OLHADA NAS MÉDIAS JA FEITAS.\n[ 3 ] - APAGAR TODOS OS DADOS DO ARQUIVO.\n[ 4 ] - SAIR.\033[m ")
-    option = read_int('\033[1;95m-> Sua Opção:\033[m')
+    print(stylize("\n-> O QUE DESEJA FAZER AGORA?\n[ 1 ] - FECHAR MAIS MÉDIAS.\n[ 2 ] - DAR UMA OLHADA NAS MÉDIAS JA FEITAS.\n[ 3 ] - APAGAR TODOS OS DADOS DO ARQUIVO.\n[ 4 ] - SAIR. ", roxo, colored.attr("underlined")))
+    option = read_int(stylize('-> Sua Opção:', roxo, colored.attr("underlined")))
     return option 
