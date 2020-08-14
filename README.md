@@ -19,10 +19,10 @@ Necessário apenas o dowload do arquivo **FECHAMENTO_MÉDIA.EXE** localizado nes
 A forma de uso é extremamente simples e intuitiva. O professor inicialmente digita a série e a quantidade de alunos referente a série digitada, após isso o programa recebe as notas de cada atividade feita por aluno da série,simultanêamente o programa registra a turma, número de chamada, média e situação em forma de tabela em um arquivo txt. Ao fim da adição de notas pela serie o professor tem opções de fechar mais médias, ver as médias que ja foram fechadas ou apagar os dados do arquivo.
 
 ## :newspaper: Screens
-![tela1](https://user-images.githubusercontent.com/64699971/90176018-baee0400-dd7e-11ea-94b4-a0b76917d775.png)
-![tela2](https://user-images.githubusercontent.com/64699971/90176056-ca6d4d00-dd7e-11ea-9cee-f5798b67f3b6.png)
-![tela4](https://user-images.githubusercontent.com/64699971/90176098-d6f1a580-dd7e-11ea-8881-7ea6d776af2e.png)
-![tela5](https://user-images.githubusercontent.com/64699971/90176104-d8bb6900-dd7e-11ea-9c9f-7356aec6e646.png)
+![tela1](https://user-images.githubusercontent.com/64699971/90288822-11c40e00-de51-11ea-9c5d-ee0aea2c7a5f.png)
+![tela2](https://user-images.githubusercontent.com/64699971/90288824-12f53b00-de51-11ea-89d3-b88d14e9abed.png)
+![tela4](https://user-images.githubusercontent.com/64699971/90288825-12f53b00-de51-11ea-95b4-192bdac41976.png)
+![tela5](https://user-images.githubusercontent.com/64699971/90288827-138dd180-de51-11ea-9af1-e4e3c649879b.png)
 
 
 ### 🔩 Análise dos dados inseridos
