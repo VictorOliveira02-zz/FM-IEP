@@ -1,9 +1,7 @@
-import colored
-from colored import stylize
+import colorama
+from colorama import Fore
 
-vermelho = colored.fg("red_1") + colored.attr("bold")
-verde = colored.fg("green") + colored.attr("bold")
-verde_olive = colored.fg("dark_olive_green_3b") + colored.attr("bold")
+colorama.init(autoreset=True)
 
 def add_medias(txt):
     arquivo = open('FM_IEP.txt', 'a+')
@@ -14,18 +12,18 @@ def files():
     try:
         arquivo = open("FM_IEP.txt", "a+")
     except:
-        print(stylize('\nNÃO FOI POSSIVEL ABRIR O ARQUIVO FM_IEP.txt!\n', vermelho, colored.attr("underlined")))
+        print(Fore.RED + '\nNÃO FOI POSSIVEL ABRIR O ARQUIVO FM_IEP.txt!\n')
     else:
-        print(stylize('\n\033[1;32mARQUIVO FM_IEP.txt CRIADO COM SUCESSO!\n', verde, colored.attr("underlined")))
+        print(Fore.GREEN + '\n\033[1;32mARQUIVO FM_IEP.txt CRIADO COM SUCESSO!\n')
         arquivo.close()
 
 def open_arquivo():
     try:
         arquivo = open("FM_IEP.txt", "r")
     except:
-        print(stylize('\nNÃO FOI POSSIVEL ABRIR O ARQUIVO FM_IEP.txt!\n', vermelho, colored.attr("underlined")))
+        print(Fore.RED + '\nNÃO FOI POSSIVEL ABRIR O ARQUIVO FM_IEP.txt!\n')
     else:
-        print(stylize(arquivo.read(), verde_olive, colored.attr("underlined")))
+        print(Fore.YELLOW + arquivo.read())
         arquivo.close()
 
 def reset():
