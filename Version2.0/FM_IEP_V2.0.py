@@ -46,6 +46,7 @@ while True:
     arquivos.add_medias('\nN | MEDIA FINAL | SITUACAO\n')
     arquivos.add_medias(f"{'-'*26}\n")
     for aluno in range(qnt):
+        print(f'Fechando a Média: Número da Chamada -> {aluno+1}')
         n1 = libs.prova('\nNOTA DA PROVA(6.0): ')
         n2 = libs.teste('\nNOTA DO TESTE(1.0): ')
         n3 = libs.atividade('\nNOTA DA ATIVIDADE 1(1.0): ')
