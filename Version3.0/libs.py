@@ -1,5 +1,16 @@
-import colorama
+from datetime import datetime
+from calendar import calendar
 from colorama import Fore
+from time import sleep
+import colorama
+import sys 
+import os
+
+sys.path.append('C:\\Users\\victo\\Desktop\\Victor\\Programação\\Linguagem Python\\FM _IEP\\Version 2.0\\arquivos.py')
+import arquivos
+
+name = os.environ['USERNAME']
+
 
 colorama.init(autoreset=True)
 
@@ -9,7 +20,6 @@ def read_int(txt):
             read = int(input(txt))
         except (ValueError, TypeError, KeyboardInterrupt):
             print(Fore.RED + '\nPOR FAVOR,UTILIZE APENAS NÚMEROS!')
-            continue
         else:
             return read
 
@@ -56,6 +66,45 @@ def atividade(msg):
             return atividade
 
 def main():
-    print(Fore.MAGENTA + "\n-> O QUE DESEJA FAZER AGORA?\n[ 1 ] - FECHAR MÉDIAS.\n[ 2 ] - DAR UMA OLHADA NAS MÉDIAS JA FEITAS.\n[ 3 ] - APAGAR TODOS OS DADOS DO ARQUIVO.\n[ 4 ] - VER CALENDÁRIO.\n[ 5 ] - FECHAR QUINTO CONCEITO.\n[ 6 ] - SAIR.")
+    print(Fore.MAGENTA + f'\n{" MENU PRINCIPAL ":=^70}')
+    print(Fore.MAGENTA + "\n-> O QUE DESEJA FAZER AGORA?\n[ 1 ] - FECHAR MÉDIAS.\n[ 2 ] - DAR UMA OLHADA NAS MÉDIAS JÁ FEITAS.\n[ 3 ] - APAGAR TODOS OS DADOS DO ARQUIVO.\n[ 4 ] - VER CALENDÁRIO.\n[ 5 ] - FECHAR QUINTO CONCEITO.\n[ 6 ] - SAIR.")
     option = read_int('-> Sua Opção:')
-    return option
+
+    if option > 6 or option < 0:
+        print(Fore.RED + '\nPOR FAVOR,ESCOLHA UMA OPÇÃO VÁLIDA!')
+        main()
+    else:
+        if option == 1:
+            print(Fore.MAGENTA + '[ 1 ] - FECHAR MÉDIAS.')
+            pass
+        if option == 2:
+            print(Fore.MAGENTA + '[ 2 ] - DAR UMA OLHADA NAS MÉDIAS JÁ FEITAS.')
+            print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
+            sleep(2)
+            arquivos.open_arquivo()
+            main()
+        if option == 3:
+            print(Fore.MAGENTA + '[ 3 ] - APAGAR TODOS OS DADOS DO ARQUIVO.')
+            print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
+            print('Apagando Dados do Arquivo...')
+            sleep(2)
+            arquivos.reset()
+            print('Dados do Arquivo apagados com Sucesso!...')
+            main()
+        if option == 4:
+            print(Fore.MAGENTA + '[ 4 ] - VER CALENDÁRIO.')
+            print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
+            print('-'*70)
+            sleep(2)
+            now = datetime.now()
+            print(calendar(now.year))
+            print('-'*70)
+            main()
+        if option == 5:
+            print(Fore.MAGENTA + '[ 5 ] - FECHAR QUINTO CONCEITO.')
+            pass
+            main()
+        if option == 6:
+            print(Fore.GREEN + f'{f"ATÉ MAIS, PROFESSOR(A) {name.upper()}. OBRIGADO POR UTILIZAR!": ^80}')
+            print('-'*70)
+            exit()
