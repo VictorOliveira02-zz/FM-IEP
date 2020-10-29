@@ -2,17 +2,14 @@ from datetime import datetime
 from calendar import calendar
 from colorama import Fore
 from time import sleep
+import final_advice
 import colorama
-import sys 
+import arquivos
 import os
 
-sys.path.append('C:\\Users\\victo\\Desktop\\Victor\\Programação\\Linguagem Python\\FM _IEP\\Version 2.0\\arquivos.py')
-import arquivos
-
 name = os.environ['USERNAME']
-
-
 colorama.init(autoreset=True)
+
 
 def read_int(txt):
     while True:
@@ -29,6 +26,7 @@ def virgula(msg):
         entrada = input(msg).strip().replace(',', '.')
         return float(entrada)
 
+
 def prova(msg):
     while True:
         try:
@@ -40,6 +38,7 @@ def prova(msg):
             print(Fore.RED + '\nPOR FAVOR,UTILIZE APENAS NOTAS VÁLIDAS!')
         else:
             return prova
+
 
 def teste(msg):
     while True:
@@ -53,6 +52,7 @@ def teste(msg):
         else:
             return teste
 
+
 def atividade(msg):
     while True:
         try:
@@ -64,6 +64,7 @@ def atividade(msg):
             print(Fore.RED + '\nPOR FAVOR,UTILIZE APENAS NOTAS VÁLIDAS!')
         else:
             return atividade
+
 
 def main():
     print(Fore.MAGENTA + f'\n{" MENU PRINCIPAL ":=^70}')
@@ -77,21 +78,21 @@ def main():
         if option == 1:
             print(Fore.MAGENTA + '[ 1 ] - FECHAR MÉDIAS.')
             pass
-        if option == 2:
+        elif option == 2:
             print(Fore.MAGENTA + '[ 2 ] - DAR UMA OLHADA NAS MÉDIAS JÁ FEITAS.')
             print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
             sleep(2)
             arquivos.open_arquivo()
             main()
-        if option == 3:
-            print(Fore.MAGENTA + '[ 3 ] - APAGAR TODOS OS DADOS DO ARQUIVO.')
+        elif option == 3:
+            print(Fore.MAGENTA + '[ 3 ] - APAGAR TODOS OS DADOS DO ARQUIVO FM_IEP.txt.')
             print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
             print('Apagando Dados do Arquivo...')
             sleep(2)
             arquivos.reset()
-            print('Dados do Arquivo apagados com Sucesso!...')
+            print('Dados do Arquivo apagados com Sucesso!')
             main()
-        if option == 4:
+        elif option == 4:
             print(Fore.MAGENTA + '[ 4 ] - VER CALENDÁRIO.')
             print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
             print('-'*70)
@@ -100,11 +101,11 @@ def main():
             print(calendar(now.year))
             print('-'*70)
             main()
-        if option == 5:
-            print(Fore.MAGENTA + '[ 5 ] - FECHAR QUINTO CONCEITO.')
-            pass
+        elif option == 5:
+            print(Fore.MAGENTA + '[ 5 ] - FECHAR QUINTO CONCEITO.\n')
+            final_advice.media_final_advice()
             main()
-        if option == 6:
+        elif option == 6:
             print(Fore.GREEN + f'{f"ATÉ MAIS, PROFESSOR(A) {name.upper()}. OBRIGADO POR UTILIZAR!": ^80}')
             print('-'*70)
             exit()
