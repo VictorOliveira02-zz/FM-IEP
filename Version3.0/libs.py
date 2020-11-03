@@ -5,7 +5,7 @@ import file_final_advice
 from time import sleep
 import final_advice
 import colorama
-import arquivos
+import file_FM_IEP
 import os
 
 name = os.environ['USERNAME']
@@ -21,20 +21,21 @@ def read_int(txt):
         else:
             return read
 
-def virgula(msg):
-    válido = False
-    while not válido:
-        entrada = input(msg).strip().replace(',', '.')
-        return float(entrada)
+
+def comma_grade(msg):
+    valid = False
+    while not valid:
+        inputed = input(msg).strip().replace(',', '.')
+        return float(inputed)
 
 
 def prova(msg):
     while True:
         try:
-            prova = virgula(msg)
+            prova = comma_grade(msg)
             while prova > 6 or prova < 0:
                 print(Fore.RED + '\nATENÇÃO! O VALOR MÁXIMO DA PROVA É DE 6 PONTOS')
-                prova = virgula(msg) 
+                prova = comma_grade(msg) 
         except ValueError:
             print(Fore.RED + '\nPOR FAVOR, UTILIZE APENAS NOTAS VÁLIDAS!')
         else:
@@ -44,10 +45,10 @@ def prova(msg):
 def teste(msg):
     while True:
         try:
-            teste = virgula(msg)
+            teste = comma_grade(msg)
             while teste > 1 or teste < 0:
                 print(Fore.RED + '\nATENÇÃO! O VALOR MÁXIMO DO TESTE É DE 1 PONTO ')
-                teste = virgula(msg) 
+                teste = comma_grade(msg) 
         except ValueError:
             print(Fore.RED + '\nPOR FAVOR, UTILIZE APENAS NOTAS VÁLIDAS!')
         else:
@@ -57,10 +58,10 @@ def teste(msg):
 def atividade(msg):
     while True:
         try:
-            atividade = virgula(msg)
+            atividade = comma_grade(msg)
             while atividade > 1 or atividade < 0:
                 print(Fore.RED + '\nATENÇÃO! O VALOR MÁXIMO DA ATIVIDADE 1 É DE 1 PONTO ')
-                atividade = virgula(msg) 
+                atividade = comma_grade(msg) 
         except ValueError:
             print(Fore.RED + '\nPOR FAVOR, UTILIZE APENAS NOTAS VÁLIDAS!')
         else:
@@ -87,20 +88,20 @@ def main():
     else:
         if option == 1:
             print(Fore.MAGENTA + '[ 1 ] - FECHAR MÉDIAS.')
-            arquivos.files() 
+            file_FM_IEP.open_file() 
             pass
         elif option == 2:
             print(Fore.MAGENTA + '[ 2 ] - DAR UMA OLHADA NAS MÉDIAS JÁ FEITAS.')
             print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
             sleep(2)
-            arquivos.open_arquivo()
+            file_FM_IEP.read_file()
             main()
         elif option == 3:
             print(Fore.MAGENTA + '[ 3 ] - APAGAR TODOS OS DADOS DO ARQUIVO FM_IEP.txt.')
             print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
             print('Apagando Dados do Arquivo...')
             sleep(2)
-            arquivos.reset()
+            file_FM_IEP.reset_file()
             print('DADOS DO ARQUIVO APAGADOS COM SUCESSO!')
             main()
         elif option == 4:
@@ -114,21 +115,21 @@ def main():
             main()
         elif option == 5:
             print(Fore.MAGENTA + '[ 5 ] - FECHAR QUINTO CONCEITO.\n')
-            file_final_advice.files() 
-            final_advice.media_final_advice()
+            file_final_advice.open_file() 
+            final_advice.average_final_advice()
             main()
         elif option == 6:
             print(Fore.MAGENTA + '[ 6 ] - DAR UMA OLHADA NAS MÉDIAS DE QUINTO CONCEITO.')
             print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
             sleep(2)
-            file_final_advice.open_arquivo()
+            file_final_advice.read_file()
             main() 
         elif option == 7:
             print(Fore.MAGENTA + '[ 7 ] - APAGAR TODOS OS DADOS DO ARQUIVO Quinto_Conceito.txt.')
             print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
             print('Apagando Dados do Arquivo...')
             sleep(2)
-            file_final_advice.reset()
+            file_final_advice.reset_file()
             print('DADOS DO ARQUIVO APAGADOS COM SUCESSO!')
             main()        
         elif option == 8:

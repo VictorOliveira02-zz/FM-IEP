@@ -3,32 +3,32 @@ import colorama
 
 colorama.init(autoreset=True)
 
-def add_medias(txt):
-    arquivo = open('Quinto_Conceito.txt', 'a+')
-    arquivo.write(txt)
-    arquivo.close()
+def add_average(txt):
+    file = open('Quinto_Conceito.txt', 'a+')
+    file.write(txt)
+    file.close()
 
 
-def files():
+def open_file():
     try:
-        arquivo = open("Quinto_Conceito.txt", "a+")
+        file = open("Quinto_Conceito.txt", "a+")
     except:
         print(Fore.RED + '\nNÃO FOI POSSIVEL ABRIR O ARQUIVO Quinto_Conceito.txt!\n')
     else:
         print(Fore.GREEN + '\033[1;32mARQUIVO Quinto_Conceito.txt CRIADO COM SUCESSO!\n')
-        arquivo.close()
+        file.close()
 
 
-def open_arquivo():
+def read_file():
     try:
-        arquivo = open("Quinto_Conceito.txt", "r")
+        file = open("Quinto_Conceito.txt", "r")
     except:
         print(Fore.RED + '\nNÃO FOI POSSIVEL ABRIR O ARQUIVO Quinto_Conceito.txt!\n')
     else:
-        print(Fore.YELLOW + arquivo.read())
-        arquivo.close()
+        print(Fore.YELLOW + file.read())
+        file.close()
 
 
-def reset():
-    arquivo = open('Quinto_Conceito.txt', 'w+')
-    arquivo.close()
+def reset_file():
+    file = open('Quinto_Conceito.txt', 'w+')
+    file.close()
