@@ -90,7 +90,7 @@ def main():
             print('Apagando Dados do Arquivo...')
             sleep(2)
             arquivos.reset()
-            print('Dados do Arquivo apagados com Sucesso!')
+            print('DADOS DO ARQUIVO APAGADOS COM SUCESSO!')
             main()
         elif option == 4:
             print(Fore.MAGENTA + '[ 4 ] - VER CALENDÁRIO.')
