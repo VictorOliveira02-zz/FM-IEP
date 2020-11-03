@@ -1,6 +1,7 @@
 from datetime import datetime
 from calendar import calendar
 from colorama import Fore
+import file_final_advice
 from time import sleep
 import final_advice
 import colorama
@@ -35,7 +36,7 @@ def prova(msg):
                 print(Fore.RED + '\nATENÇÃO! O VALOR MÁXIMO DA PROVA É DE 6 PONTOS')
                 prova = virgula(msg) 
         except ValueError:
-            print(Fore.RED + '\nPOR FAVOR,UTILIZE APENAS NOTAS VÁLIDAS!')
+            print(Fore.RED + '\nPOR FAVOR, UTILIZE APENAS NOTAS VÁLIDAS!')
         else:
             return prova
 
@@ -48,7 +49,7 @@ def teste(msg):
                 print(Fore.RED + '\nATENÇÃO! O VALOR MÁXIMO DO TESTE É DE 1 PONTO ')
                 teste = virgula(msg) 
         except ValueError:
-            print(Fore.RED + '\nPOR FAVOR,UTILIZE APENAS NOTAS VÁLIDAS!')
+            print(Fore.RED + '\nPOR FAVOR, UTILIZE APENAS NOTAS VÁLIDAS!')
         else:
             return teste
 
@@ -61,22 +62,32 @@ def atividade(msg):
                 print(Fore.RED + '\nATENÇÃO! O VALOR MÁXIMO DA ATIVIDADE 1 É DE 1 PONTO ')
                 atividade = virgula(msg) 
         except ValueError:
-            print(Fore.RED + '\nPOR FAVOR,UTILIZE APENAS NOTAS VÁLIDAS!')
+            print(Fore.RED + '\nPOR FAVOR, UTILIZE APENAS NOTAS VÁLIDAS!')
         else:
             return atividade
 
 
 def main():
     print(Fore.MAGENTA + f'\n{" MENU PRINCIPAL ":=^70}')
-    print(Fore.MAGENTA + "\n-> O QUE DESEJA FAZER AGORA?\n[ 1 ] - FECHAR MÉDIAS.\n[ 2 ] - DAR UMA OLHADA NAS MÉDIAS JÁ FEITAS.\n[ 3 ] - APAGAR TODOS OS DADOS DO ARQUIVO.\n[ 4 ] - VER CALENDÁRIO.\n[ 5 ] - FECHAR QUINTO CONCEITO.\n[ 6 ] - SAIR.")
+    print(Fore.MAGENTA + '''\n-> O QUE DESEJA FAZER AGORA?
+    [ 1 ] - FECHAR MÉDIAS.
+    [ 2 ] - DAR UMA OLHADA NAS MÉDIAS JÁ FEITAS.
+    [ 3 ] - APAGAR TODOS OS DADOS DO ARQUIVO FM_IEP.txt.
+    [ 4 ] - VER CALENDÁRIO.
+    [ 5 ] - FECHAR MÉDIAS DE QUINTO CONCEITO.
+    [ 6 ] - DAR UMA OLHADA NAS MÉDIAS DE QUINTO CONCEITO.
+    [ 7 ] - APAGAR TODOS OS DADOS DO ARQUIVO Quinto_Conceito.txt.
+    [ 8 ] - SAIR.''')
+
     option = read_int('-> Sua Opção:')
 
-    if option > 6 or option < 0:
-        print(Fore.RED + '\nPOR FAVOR,ESCOLHA UMA OPÇÃO VÁLIDA!')
+    if option > 8 or option < 0:
+        print(Fore.RED + '\nPOR FAVOR, ESCOLHA UMA OPÇÃO VÁLIDA!')
         main()
     else:
         if option == 1:
             print(Fore.MAGENTA + '[ 1 ] - FECHAR MÉDIAS.')
+            arquivos.files() 
             pass
         elif option == 2:
             print(Fore.MAGENTA + '[ 2 ] - DAR UMA OLHADA NAS MÉDIAS JÁ FEITAS.')
@@ -103,9 +114,24 @@ def main():
             main()
         elif option == 5:
             print(Fore.MAGENTA + '[ 5 ] - FECHAR QUINTO CONCEITO.\n')
+            file_final_advice.files() 
             final_advice.media_final_advice()
             main()
         elif option == 6:
+            print(Fore.MAGENTA + '[ 6 ] - DAR UMA OLHADA NAS MÉDIAS DE QUINTO CONCEITO.')
+            print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
+            sleep(2)
+            file_final_advice.open_arquivo()
+            main() 
+        elif option == 7:
+            print(Fore.MAGENTA + '[ 7 ] - APAGAR TODOS OS DADOS DO ARQUIVO Quinto_Conceito.txt.')
+            print(Fore.BLUE + f'\nAGUARDE SÓ UM POUQINHO, APROVEITE PARA BEBER UM POUCO DE ÁGUA...')
+            print('Apagando Dados do Arquivo...')
+            sleep(2)
+            file_final_advice.reset()
+            print('DADOS DO ARQUIVO APAGADOS COM SUCESSO!')
+            main()        
+        elif option == 8:
             print(Fore.GREEN + f'{f"ATÉ MAIS, PROFESSOR(A) {name.upper()}. OBRIGADO POR UTILIZAR!": ^80}')
             print('-'*70)
             exit()

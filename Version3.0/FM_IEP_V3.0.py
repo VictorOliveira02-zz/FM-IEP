@@ -22,8 +22,7 @@ print(Fore.CYAN + f'\n{f" OLÁ, PROFESSOR(A) {name.upper()} SEJA MUITO BEM-VINDO
 print(Fore.CYAN + f'\n{f" {data_e_hora_sao_paulo_em_texto} ": ^70}')
 
 
-sleep(2)
-arquivos.files() 
+sleep(1)
 
 while True:
     libs.main()
