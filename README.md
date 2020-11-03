@@ -56,7 +56,7 @@ O arquivo executável foi enviado para os professores da instituição que utili
 
 ## 📌 Versão
 
-Este projeto possui um intuito estudantil, logo as versões são publicadas conforme o aprendizado evolui, atualmente está na segunda versão.
+Este projeto possui um intuito estudantil, logo as versões são publicadas conforme o aprendizado evolui, atualmente a terceira versão está em desenvolvimento.
 
 ## ✒️ Autor
 
