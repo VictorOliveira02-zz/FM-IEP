@@ -135,4 +135,5 @@ def main():
         elif option == 8:
             print(Fore.GREEN + f'{f"ATÉ MAIS, PROFESSOR(A) {name.upper()}. OBRIGADO POR UTILIZAR!": ^80}')
             print('-'*70)
+            sleep(3)
             exit()
