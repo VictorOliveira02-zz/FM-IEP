@@ -12,7 +12,7 @@ Sistema Operacional Windows
 
 ## 🔧 Instalação
 
-Necessário apenas o dowload do arquivo [**FECHAMENTO_MÉDIA_IEP**](https://drive.google.com/file/d/12r8Qz_DYPg-KsDpCMO37zTAU7X8DctCp/view?usp=sharing).
+Necessário apenas o dowload do arquivo [**FECHAMENTO_MÉDIA_IEP**](https://drive.google.com/drive/folders/1NR1sQgU7Euo3dxfdbW52yuv0BYYfbTh6?usp=sharing).
 
 ## ⚙️ Execução
 
