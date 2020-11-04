@@ -12,7 +12,7 @@ Sistema Operacional Windows
 
 ## 🔧 Instalação
 
-Necessário apenas o dowload do arquivo **FECHAMENTO_MÉDIA.EXE** localizado neste repositório.
+Necessário apenas o dowload do arquivo [**FECHAMENTO_MÉDIA_IEP**](https://drive.google.com/drive/folders/1NR1sQgU7Euo3dxfdbW52yuv0BYYfbTh6?usp=sharing).
 
 ## ⚙️ Execução
 
@@ -53,10 +53,6 @@ O arquivo executável foi enviado para os professores da instituição que utili
 
 * [Python 3](https://www.python.org/downloads/) - O compilador/IDE utilizado.
 * [PyInstaller](https://www.pyinstaller.org/) - Biblioteca utilizada para gerar o arquivo executável.
-
-## 📌 Versão
-
-Este projeto possui um intuito estudantil, logo as versões são publicadas conforme o aprendizado evolui, atualmente a terceira versão está em desenvolvimento.
 
 ## ✒️ Autor
 
