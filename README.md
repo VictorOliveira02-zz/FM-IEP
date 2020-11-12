@@ -19,12 +19,15 @@ Necessário apenas o dowload do arquivo [**FECHAMENTO_MÉDIA_IEP**](https://driv
 A forma de uso é extremamente simples e intuitiva. O professor inicialmente digita a série e a quantidade de alunos referente a série digitada, após isso o programa recebe as notas de cada atividade feita por aluno da série,simultanêamente o programa registra a turma, número de chamada, média e situação em forma de tabela em um arquivo txt. Ao fim da adição de notas pela serie o professor tem opções de fechar mais médias, ver as médias que ja foram fechadas ou apagar os dados do arquivo.
 
 ## :newspaper: Screens
-![Tela1](https://user-images.githubusercontent.com/64699971/90433616-817d0780-e0a2-11ea-9254-e4bba135665f.png)
-![Tela2](https://user-images.githubusercontent.com/64699971/90433618-817d0780-e0a2-11ea-83b0-7497a917e0b2.png)
-![Tela3](https://user-images.githubusercontent.com/64699971/90433619-82159e00-e0a2-11ea-9236-b4cc48f01a8f.png)
-![Tela4](https://user-images.githubusercontent.com/64699971/90433609-7fb34400-e0a2-11ea-8739-0183bcff1c32.png)
-![Tela5](https://user-images.githubusercontent.com/64699971/90433612-80e47100-e0a2-11ea-8bd0-5c96a07d209d.png)
-![Tela6](https://user-images.githubusercontent.com/64699971/90433615-80e47100-e0a2-11ea-8953-307584ff8523.png)
+<p align="center">
+  <img width="500" height="350" src="https://user-images.githubusercontent.com/64699971/98950103-58201c00-24d7-11eb-9749-18fb82e51000.png">
+  <img width="500" height="650" src="https://user-images.githubusercontent.com/64699971/98950104-58b8b280-24d7-11eb-961e-f76e8e9c56ca.png">
+  <img width="500" height="350" src="https://user-images.githubusercontent.com/64699971/98950107-58b8b280-24d7-11eb-82e0-c2a85535e424.png">
+  <img width="500" height="650" src="https://user-images.githubusercontent.com/64699971/98950109-58b8b280-24d7-11eb-8025-6805bb9258ac.png">
+  <img width="500" height="350" src="https://user-images.githubusercontent.com/64699971/98949888-0f686300-24d7-11eb-99a0-6eb002f3f53d.png">
+  <img width="500" height="350" src="https://user-images.githubusercontent.com/64699971/98950111-59514900-24d7-11eb-95e5-6fe9a339a15b.png">
+  <img width="500" height="100" src="https://user-images.githubusercontent.com/64699971/98950101-57878580-24d7-11eb-8b7f-62825537ffc4.png">
+</p>
 
 
 ### 🔩 Análise dos dados inseridos
