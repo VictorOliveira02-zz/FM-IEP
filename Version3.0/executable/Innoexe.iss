@@ -4,13 +4,13 @@
 #define MyAppName "Fechamento_Média_IEP"
 #define MyAppVersion "3.0"
 #define MyAppPublisher "Victor Alves de Oliveira"
-#define MyAppURL "https://github.com/VictorOliveira02/FM-IEP"
+#define MyAppURL "https://www.linkedin.com/in/victor-alves-de-oliveira/"
 #define MyAppExeName "FM_IEP_V3.0.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{471FCDB1-DF05-456B-97A1-C6B16096EC53}
+AppId={{2010AFCA-7CFA-46D7-B5B3-100172C4977A}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -19,11 +19,13 @@ AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
-DisableProgramGroupPage=yes
+DefaultGroupName={#MyAppName}
+AllowNoIcons=yes
 ; The [Icons] "quicklaunchicon" entry uses {userappdata} but its [Tasks] entry has a proper IsAdminInstallMode Check.
 UsedUserAreasWarning=no
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
+OutputDir=D:\Área de Trabalho\Victor\Programação\Linguagem Python\FM _IEP\executable
 OutputBaseFilename=Setup_Fechamento_Média_IEP
 SetupIconFile=D:\Área de Trabalho\Victor\Programação\Linguagem Python\FM _IEP\Version3.0\images\logo.ico
 Compression=lzma
@@ -31,6 +33,7 @@ SolidCompression=yes
 WizardStyle=modern
 
 [Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 
 [Tasks]
@@ -38,11 +41,14 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 6.1; Check: not IsAdminInstallMode
 
 [Files]
-Source: "D:\Área de Trabalho\Victor\Programação\Linguagem Python\FM _IEP\Version3.0\executable\FM_IEP_V3.0.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Área de Trabalho\Victor\Programação\Linguagem Python\FM _IEP\executable\FM_IEP_V3.0.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Área de Trabalho\Victor\Programação\Linguagem Python\FM _IEP\Version3.0\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: "{group}\{cm:ProgramOnTheWeb,{#MyAppName}}"; Filename: "{#MyAppURL}"
+Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: quicklaunchicon
 

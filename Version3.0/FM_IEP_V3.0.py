@@ -1,6 +1,5 @@
 from datetime import datetime
 from colorama import Fore
-from pytz import timezone
 from time import sleep
 import file_FM_IEP
 import colorama
