@@ -54,7 +54,8 @@ O arquivo executável foi enviado para os professores da instituição que utili
 
 ## 🛠️ Ferramentas
 
-* [Python 3](https://www.python.org/downloads/) - O compilador/IDE utilizado.
+* [VS Code](https://code.visualstudio.com/)
+* [Python 3](https://www.python.org/downloads/)
 * [PyInstaller](https://www.pyinstaller.org/) - Biblioteca utilizada para gerar o arquivo executável.
 
 ## ✒️ Autor
